@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
 
     if (document.querySelector("#element")) {
@@ -51,4 +52,3 @@ const navMenu = document.getElementById("navMenu");
 hamburger.addEventListener("click", () => {
     navMenu.classList.toggle("active");
 });
-
