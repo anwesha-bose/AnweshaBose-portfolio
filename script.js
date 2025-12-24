@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLinks = document.querySelectorAll("nav ul li a");
     const nav = document.querySelector("nav");
 
+
     window.addEventListener("scroll", () => {
         let currentSection = "";
 
@@ -44,3 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+

@@ -346,6 +346,90 @@ main hr {
     transition: width 0.4s ease;
 }
 
+.projects-section {
+    padding: 60px 8%;
+}
+
+.projects-grid {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    /* LEFT aligned */
+}
+
+.project-card {
+    width: 320px;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.02));
+    border-radius: 26px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.35s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 35px rgba(174, 0, 255, 0.18);
+}
+
+
+
+
+/* Content Section */
+.project-content {
+    padding: 22px 22px 26px;
+}
+
+.project-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.project-link {
+    color: #9b5cff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    color: #9b5cff;
+}
+
+.project-tech {
+    font-size: 14px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 14px;
+}
+
+.project-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 18px;
+}
+
+/* Tags */
+.project-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-tags span {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    background: rgba(115, 0, 255, 0.12);
+    color: #9b5cff;
+}
+
+
 .interests-section {
     padding: 60px 8%;
     text-align: center;
@@ -486,4 +570,217 @@ footer hr {
     color: #9b5cff;
     border-color: #9b5cff;
     box-shadow: 0 10px 25px rgba(155, 92, 255, 0.25);
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .right {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgb(10, 10, 46);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 0;
+        z-index: 9999;
+    }
+
+    .right.active {
+        display: flex;
+    }
+
+    .right ul {
+        flex-direction: column;
+        gap: 18px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .right ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .right ul li a {
+        display: block;
+        padding: 12px 0;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #home {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 40px 6%;
+        gap: 40px;
+    }
+
+    .leftsection,
+    .rightsection {
+        width: 100%;
+    }
+
+    .leftsection h1 {
+        font-size: 28px;
+        line-height: 1.5;
+    }
+
+    #element {
+        font-size: 32px;
+        min-height: 40px;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .hero-btn {
+        width: 100%;
+        max-width: 260px;
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .rightsection img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    main hr {
+        margin: 30px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .skills-section,
+    .interests-section,
+    .contact-section {
+        padding: 50px 6%;
+    }
+
+    .skill-card {
+        padding: 28px 20px;
+    }
+
+    .interest-pill {
+        font-size: 16px;
+        padding: 14px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .education-card {
+        padding: 24px 22px;
+        text-align: center;
+    }
+
+    .education-card h3 {
+        font-size: 20px;
+    }
+
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        font-size: 16px;
+    }
+
+    .contact-card i {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .site-footer {
+        padding: 40px 6%;
+    }
+
+    .footer-text {
+        font-size: 14px;
+    }
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Nav */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .right {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background: rgb(10, 10, 46);
+        display: none;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .right.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .projects-grid {
+        justify-content: center;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 360px;
+    }
 }
